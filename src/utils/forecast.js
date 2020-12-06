@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if(body.error){
             callback('Unable to find weather data', undefined)
         } else {
-            callback(undefined, `It is currently ${body.current.temp_c} degree out. There is ${body.current.precip_in} in precipetation.`)
+            callback(undefined, `It is currently ${body.current.temp_c} degree celcius and ${body.current.precip_in} inches precipetation out there. And the condition is ${body.current.condition.text}`)
         }
     })
 }
