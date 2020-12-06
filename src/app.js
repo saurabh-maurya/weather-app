@@ -6,6 +6,7 @@ const geomaping = require('./utils/geocode');
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // define paths for Express calling
 const publicDirPath = path.join(__dirname,'../public')
@@ -93,6 +94,6 @@ app.get('*', (req, res) => {
 
 
 //starting server on specified port
-app.listen(3000, () => {
-    console.log('Server started listening at port 3000')
+app.listen(port, () => {
+    console.log('Server started listening at port ' + port)
 })
